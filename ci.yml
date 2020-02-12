@@ -1,4 +1,5 @@
 script:
+        - echo "Demonstrating CI" 
         - oc login -u kubeadmin -p mhk2X-Y8ozE-9icYb-uLCdV --insecure-skip-tls-verify=true https://api.crc.testing:6443
         - IMAGE_BUILD_ARGS="--storage-driver vfs" ./build/build_ci.sh
         - cd ./tests/smoketest 
